@@ -55,10 +55,12 @@ class Location
 		/* Matching z for lowest x */
 		int get_z0() { return lx_z; }
 
+		/* Store a location id */
 		void set_id(int ilocId) {
 			locid = ilocId;
 		}
 
+		/* Store a description buf */
 		void set_descr(const char* descr) {
 			if ( this->descr )
 				delete this->descr;
@@ -69,6 +71,7 @@ class Location
 				this->descr = NULL;
 		}
 
+		/* Store a name */
 		void set_name(const char* name) {
 			if ( this->name )
 				delete this->name;
@@ -79,10 +82,12 @@ class Location
 				this->name = NULL;
 		}
 
+		/* Report the name at the location */
 		const char* get_name() const {
 			return name;
 		}
 
+		/* Report the description at the location */
 		const char* get_descr() const {
 			return descr;
 		}
