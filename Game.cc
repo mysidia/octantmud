@@ -121,6 +121,8 @@ Game::Game_State Game::get_state() {
 
 /**
  * Disconnect the descriptors logged in as an account
+ *
+ * @param p Account to disconnect
  */
 bool Game :: disconnect_account ( Account* p )
 {
