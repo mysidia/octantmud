@@ -31,11 +31,15 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/*
+ * Maximum number of arguments
+ */
 const int MAX_ARG = 10;
 
 class Parser
 {
 	public:
+		/* Setup for parse at max args (at most) and buffer buf */
 		Parser( int max, char*& buf ) : argc(0) {
 			char nb[MAX_INPUT_LEN];
 			int count = 0, i, es = 0, fl = 0, sp = 1, x = 0;
