@@ -1,0 +1,10 @@
+                         -----================-----
+
+			Welcome to the Mud
+
+
+				Running OMud1.0 pre-ALPHA
+
+			     --================--
+
+By what name would you like to be known? 

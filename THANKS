@@ -1,0 +1,8 @@
+
+Some AntiBot material uses knowledge from the figlet distribution http://www.figlet.org/:
+ Standard by Glenn Chappell & Ian Chai 3/93 -- based on Frank's .sig
+ Includes ISO Latin-1
+ figlet release 2.1 -- 12 Aug 1994
+ Modified for figlet 2.2 by John Cowan <cowan@ccil.org>
+
+In particular, Figlet's runtime font output was used to build antibot.cc.

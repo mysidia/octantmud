@@ -1,0 +1,74 @@
+AC_INIT(configure.in)
+AM_CONFIG_HEADER(config.h)
+
+AM_INIT_AUTOMAKE(mmud, 0.0.1-pre)
+
+[
+
+CFLAGS="$CFLAGS -ggdb"
+CXXFLAGS="$CFLAGS -ggdb"
+ 
+
+#if test "${prefix}" = "NONE" ; then
+#	includedir=${includedir}/mudparse
+#else
+#	includedir=${prefix}/include/mudparse
+#fi
+]
+
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_CPP
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AC_PROG_INSTALL
+AC_PROG_RANLIB
+AM_PROG_LIBTOOL
+AC_PROG_YACC
+AM_PROG_LEX
+
+AC_HEADER_STDC
+AC_CHECK_HEADERS(stdarg.h memory.h unistd.h stdlib.h values.h)
+AC_CHECK_HEADERS(dbi/dbi.h)
+
+AC_CHECK_FUNCS([strtol])
+
+AC_C_CONST
+AC_TYPE_SIZE_T
+AC_HEADER_TIME
+AC_STRUCT_TM
+
+AC_PROG_GCC_TRADITIONAL
+AC_TYPE_SIGNAL
+AC_FUNC_STRFTIME
+AC_FUNC_VPRINTF
+AC_CHECK_FUNCS(gethostname gettimeofday select socket strdup strerror)
+
+AC_SUBST(includedir)
+AC_ARG_ENABLE(antibot,
+	      [  --enable-antibot[=ARG]   Enable anti-bot code?],
+	      [if test "$enableval" = "yes" ; then
+	      	 mud_cv_antibot="yes"
+	       	AC_DEFINE(USE_ANTIBOT, 1, [Use anti-bot code at character creation])
+	       else
+		 mud_cv_antibot="no"
+	       fi
+	       ],
+	       [
+		AC_MSG_CHECKING([Antibot preference])
+		AC_CACHE_VAL(mud_cv_antibot, [ true ])
+		if test "$mud_cv_antibot" = "yes" ; then
+			AC_MSG_RESULT([Antibot flag enabled.])
+			AC_DEFINE(USE_ANTIBOT, 1, [Use anti-bot code at character creation])
+		else
+			AC_MSG_RESULT([Antibot flag NOT enabled.])
+		fi
+		])
+
+#[
+# WXFLAGS=`wx-config --cflags`
+#]
+#AC_SUBST(WXFLAGS)
+AC_OUTPUT(Makefile)
+
+
