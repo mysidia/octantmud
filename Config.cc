@@ -40,5 +40,7 @@ struct Config_str_pair Config_pairs[] = {
 
 Config :: Config (const char* file_name)
 {
+	  /* Load a configuration from a file */
+
 }
 

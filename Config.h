@@ -47,6 +47,7 @@ class Config {
 
 	Config( const char* file_name );
 
+	/*! Does a given key exist in the configuration? */
 	bool exists(const char* key) {
                 int i = 0;
 
@@ -56,6 +57,7 @@ class Config {
                 return 0;
 	}
 	
+	/*! Get the string value assigned to a key */
 	const char* get_str(const char* key) {
 		int i = 0;
 
@@ -64,6 +66,8 @@ class Config {
 				return Config_pairs[i].value;
 		return "";
 	}
+
+	/*! Get the value assigned to a key, converted to an int */
 	const int   get_int(const char* key) {
 		const char *s = key;
 
@@ -72,6 +76,8 @@ class Config {
 
 		return s ? atoi(s) : 0;
 	}
+
+	/*! Convert the value, parsed as a long */
 	const long   get_long(const char* key, int base = 10) {
 		const char *s = key;
 

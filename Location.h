@@ -44,6 +44,7 @@ class Location
 	
 	public:
 
+		/* Return the identifier for this location */
 		int get_loc_id() const { return locid; }
 		
 		/* Lowest x */

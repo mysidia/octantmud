@@ -1,6 +1,10 @@
 /*
  *  OMud - Object Structure
  *
+ *      For in game objects
+ *
+ *      --
+ *
  *      Copyright (C) 2003-2004 ***REMOVED***, All Rights Reserved.
  *
  *      Unless explicitly acquired and licensed from Licensor under the Technical Pursuit
