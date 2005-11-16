@@ -28,6 +28,7 @@ class Descriptor;
 class Account
 {
 	public:
+		
 		friend bool load_account( char* name, Account** acct );
 			
 		Account ( const char* name ) : 
@@ -48,10 +49,15 @@ class Account
 		}
 
 		void set_descriptor( Descriptor* );
+
+		// Get the unique accoutn id
 		long  get_id ( ) const { return acct_id; }
+
 		bool  is_active ( ) { return is_active_fl; }
 		void  set_active( bool fl ) { is_active_fl = fl; }
+		
 		char* get_name( ) { return acct_name; }
+		
 		const char* get_string_field(const char*) const;
 		const char* get_passwd() const { return get_string_field("acct_passwd"); }
 		const char* get_email() const { return get_string_field("acct_email"); }
