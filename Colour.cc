@@ -26,7 +26,7 @@
 #include "Descriptor.h"
 
 static void enter_color(
-  Descriptor * d,
+  Descriptor	*d,
   string	col,
   string &	target,
   long		color_state
@@ -47,6 +47,9 @@ long code, ansi;
 {	"white"	,	0xffffff	, 37 },
 };
 
+/*
+ *  Get the number of a color by name
+ */
 static int get_color(const char *nm) {
 	int i;
 
@@ -58,6 +61,10 @@ static int get_color(const char *nm) {
 	return -1;
 }
 
+
+/*
+ * Entry into a <font>  tag
+ */
 static void enter_font(
 	Descriptor* d,
 	vector<string>& attribs,
@@ -86,6 +93,9 @@ static void enter_font(
 	}
 }
 
+/*
+ * Entry into a tag
+ */
 static void enter_tag(
 	Descriptor* d,
 	char* str_tag_name,
@@ -99,6 +109,9 @@ static void enter_tag(
 	}
 }
 
+/*
+ * </font>
+ */
 static void exit_font(
 	Descriptor * d,
 	string &	target,
@@ -112,6 +125,10 @@ static void exit_font(
   	target += "\033[0m";
 }
 
+
+/* 
+ * Entry into a color attribute
+ */
 static void enter_color(
   Descriptor * d,
   string	col,
@@ -147,6 +164,10 @@ static void enter_color(
 	}
 }
 
+
+/**
+ * Parse markup
+ */
 void parse_mml(class Descriptor * d, char * buf)
 {
 	vector<string> attribs;

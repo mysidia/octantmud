@@ -3,4 +3,5 @@
 #include "QueryResult.h"
 
 /*
+
  */
