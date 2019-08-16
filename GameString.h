@@ -1,13 +1,13 @@
 /*
  *  OMud - Game String Structure
- *  Copyright (c) 2003, ***REMOVED*** All Rights Reserved
+ *  Copyright (c) 2003, Mysidia, All Rights Reserved
  *    EXHIBIT A
  *
  *    The Notice below must appear in each file of the Source Code of any copy You distribute of
  *    the Licensed Software or any Extensions thereto, except as may be modified as allowed
  *    under the terms of Section 7.1
  *
- *      Copyright (C) 2003-2004 ***REMOVED***, All Rights Reserved.
+ *      Copyright (C) 2003-2004 Mysidia, All Rights Reserved.
  *
  *      Unless explicitly acquired and licensed from Licensor under the Technical Pursuit
  *      License ("TPL") Version 1.0 or greater, the contents of this file are subject to the
