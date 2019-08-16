@@ -1,7 +1,7 @@
 /*
  *  Game Structure
  *
- *      Copyright (C) 2003-2004 ***REMOVED***, All Rights Reserved.
+ *      Copyright (C) 2003-2004 Mysidia, All Rights Reserved.
  *
  *      Unless explicitly acquired and licensed from Licensor under the Technical Pursuit
  *      License ("TPL") Version 1.0 or greater, the contents of this file are subject to the
